@@ -17,12 +17,25 @@
     <parent>
         <artifactId>jberet-parent</artifactId>
         <groupId>org.jberet</groupId>
-        <version>1.4.0.Alpha-SNAPSHOT</version>
+        <version>1.4.0.Alpha</version>
     </parent>
 
     <artifactId>jberet-wildfly</artifactId>
+    <version>1.4.0.Alpha-SNAPSHOT</version>
+
+    <properties>
+        <version.org.jberet.jberet-core>1.3.5.Final</version.org.jberet.jberet-core>
+    </properties>
 
     <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jberet</groupId>
+            <artifactId>jberet-core</artifactId>
+            <version>${version.org.jberet.jberet-core}</version>
+        </dependency>
+    </dependencies>
 
     <modules>
         <module>jberet-wildfly-cluster-jms</module>
